@@ -1,0 +1,5 @@
+{
+    "submenus.convertSubmenu": "转换导入语句",
+    "command.import2require": "import转为require",
+    "command.require2import": "require转为import"
+}

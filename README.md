@@ -1,71 +1,32 @@
 # bi-convert-import README
 
-This is the README for your extension "bi-convert-import". After writing up a brief description, we recommend including the following sections.
+This is a plugin for syntax conversion of import statements. 
+
+Sometimes you need to modify import statements, such as changing `import { a } from 'b'` to `const { a } = require('b');`. You can use this plugin for that purpose.
+
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* change `require` statements to `import` statements;
+* change `import` statements to `require` statements;
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+This plugin is only applicable to `TypeScript` and `JavaScript` files.
 
-## Extension Settings
+## Usage
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Mode1: Operate a file
+1. Open a `JavaScript` or `TypeScript` file, right-click the mouse, and select "bi-convert-import" menu.
+2. Based on your needs, select the "require2import" or "import2require" submenu.
 
-For example:
+### Mode2: Select code
+1. Open a `JavaScript` or `TypeScript` file, select the code section of the import statement in the file. Right-click the mouse and choose "bi-convert-import".
+2. Based on your needs, select the "require2import" or "import2require" submenu.
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
 
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [Github](https://github.com/cunzaizhuyi/bi-convert-import)
 
 **Enjoy!**

@@ -1,23 +1,77 @@
 {
   "name": "bi-convert-import",
-  "displayName": "bi-convert-import",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "convert-import-statements",
+  "description": "convert 'require' statements to 'import'. vice versa",
+  "publisher": "flyleaf",
+  "version": "0.1.0",
+  "icon": "images/icon.jpg",
+  "author": {
+      "name": "cunzaizhuyi",
+      "url": "https://github.com/cunzaizhuyi/"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/cunzaizhuyi/bi-convert-import.git"
+  },
+  "url": "https://github.com/cunzaizhuyi/bi-convert-import",
+  "bugs": {
+    "url": "https://github.com/cunzaizhuyi/bi-convert-import/issues"
+  },
   "engines": {
     "vscode": "^1.92.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
+  "activationEvents": [
+  ],
   "contributes": {
     "commands": [
       {
-        "command": "bi-convert-import.helloWorld",
-        "title": "Hello World"
+        "command": "bi-convert-import.import2require",
+        "title": "%command.import2require%"
+      },
+      {
+        "command": "bi-convert-import.require2import",
+        "title": "%command.require2import%"
       }
-    ]
+    ],
+    "submenus": [
+        {
+            "id": "bi-convert-import.convertSubmenu",
+            "label": "%submenus.convertSubmenu%"
+        }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "bi-convert-import.import2require",
+          "when": "editorLangId == javascript || editorLangId == typescript"
+        },
+        {
+          "command": "bi-convert-import.require2import",
+          "when": "editorLangId == javascript || editorLangId == typescript"
+        }
+      ],
+      "editor/context": [
+          {
+              "submenu": "bi-convert-import.convertSubmenu",
+              "when": "editorLangId == javascript || editorLangId == typescript",
+              "group": "1_modification"
+          }
+      ],
+      "bi-convert-import.convertSubmenu": [
+          {
+              "command": "bi-convert-import.import2require",
+              "group": "1_modification"
+          },
+          {
+              "command": "bi-convert-import.require2import",
+              "group": "1_modification"
+          }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

@@ -1,0 +1,5 @@
+{
+    "submenus.convertSubmenu": "Bi Convert Import",
+    "command.import2require": "import2require",
+    "command.require2import": "require2import"
+}
