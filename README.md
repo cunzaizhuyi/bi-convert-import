@@ -1,9 +1,10 @@
 # bi-convert-import README
 
-This is a plugin for syntax conversion of import statements. 
+This is a VSCode plugin for syntax conversion of import statements. 
 
 Sometimes you need to modify import statements, such as changing `import { a } from 'b'` to `const { a } = require('b');`. You can use this plugin for that purpose.
 
+[install plugin in vscode market](https://marketplace.visualstudio.com/items?itemName=flyleaf.bi-convcert-import)
 
 ## Features
 
