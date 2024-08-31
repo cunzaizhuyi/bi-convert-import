@@ -1,9 +1,9 @@
 {
-  "name": "bi-convert-import",
-  "displayName": "convert-import-statements",
+  "name": "bi-convcert-import",
+  "displayName": "Convert Import Statements",
   "description": "convert 'require' statements to 'import'. vice versa",
   "publisher": "flyleaf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "images/icon.jpg",
   "author": {
       "name": "cunzaizhuyi",
